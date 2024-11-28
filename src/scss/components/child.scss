@@ -1,0 +1,154 @@
+.child {
+	.section-title {
+		margin-bottom: 80px;
+		@include media-mx(991) {
+			margin-bottom: 32px;
+		}
+	}
+	.row.over {
+		margin-bottom: 60px;
+		
+		@include media-mn(1399) {
+			flex-wrap: wrap !important;
+		}
+		&::-webkit-scrollbar {
+			height: 2px;
+
+			background: initial;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: var(--grayscale-08);
+			border-radius: 2px;
+			margin: 0 16px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #1f222e;
+			border-radius: 2px;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background: #1f222e;
+		}
+	}
+	.item {
+		height: 280px;
+
+		padding: 32px;
+
+		background-position: center !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+
+		border-radius: 32px;
+		@include media-mx(991) {
+			height: 264px;
+
+			padding: 16px;
+
+			border-radius: 16px;
+		}
+		&.img-box {
+			padding: 0;
+		}
+		h3 {
+			font-weight: 700;
+			font-size: 24px;
+			color: var(--grayscale-01);
+		}
+		img {
+			border-radius: 32px;
+			@include media-mx(991) {
+				border-radius: 16px;
+			}
+		}
+	}
+	.btn {
+		position: relative;
+		z-index: 2;
+
+		display: block;
+		width: fit-content;
+		height: fit-content;
+		overflow: hidden;
+
+		padding: 24px 68px 24px 36px;
+
+		font-weight: 500;
+		font-size: 18px;
+		text-decoration: none;
+		text-align: center;
+
+		transition: all 0.5s ease-in-out;
+
+		background-color: var(--grayscale-01);
+		color: var(--white);
+
+		border-radius: 40px;
+		@include media-mn(1900) {
+			font-size: 20px;
+
+			padding: 28px 72px 28px 40px;
+		}
+		@include media-mx(991) {
+			font-size: 16px;
+
+			padding: 16px 34px 16px 24px;
+		}
+		@include media-mx(575) {
+		  width: 100%;
+		}
+		p {
+			position: relative;
+			z-index: 2;
+
+			margin: 0 !important;
+			padding: 0 !important;
+
+			&::before,
+			&::after {
+				position: absolute;
+				border-radius: 40px;
+				content: "";
+				right: -30px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: var(--primary-06);
+				transition: all 0.5s ease-in-out;
+				z-index: -1;
+				@include media-mn(1900) {
+					width: 12px;
+					height: 12px;
+
+					right: -23px;
+				}
+				@include media-mx(991) {
+					width: 6px;
+					height: 6px;
+
+					right: -16px;
+				}
+			}
+			&::after {
+				background-color: var(--white);
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+			background-color: var(--primary-06);
+			color: var(--white);
+
+			p::before {
+				transform: translateY(-50%) scale(99);
+			}
+			p::after {
+				opacity: 1;
+			}
+		}
+	}
+}

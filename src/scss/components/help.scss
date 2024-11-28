@@ -1,0 +1,131 @@
+.help {
+	.section-title {
+		margin-bottom: 31px;
+		@include media-mx(991) {
+			margin-bottom: 16px;
+		}
+		@include media-mx(575) {
+		  text-align: left;
+		}
+		span {
+			position: relative;
+
+			width: fit-content;
+
+			margin: 0 auto 32px;
+
+			@include media-mx(991) {
+				margin-bottom: 16px;
+			}
+			&:before {
+				content: "";
+
+				position: absolute;
+				left: 0;
+				bottom: -20px;
+				z-index: 1;
+
+				width: 100%;
+				height: 21px;
+
+				background-image: url("data:image/svg+xml,%3Csvg width='439' height='21' viewBox='0 0 439 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18C29.9875 13.9524 35.9848 5.85698 66.5706 5.85698C139.737 5.85698 130.153 14.8705 179.918 9C233.294 2.70362 253.684 23.8465 292.066 11.7035C330.449 -0.439541 362.834 2.70883 373.629 5.85698C386.485 9.6061 401.816 18 436 18' stroke='%23FFBC5B' stroke-width='6' stroke-linecap='round' /%3E%3C/svg%3E");
+				background-size: cover;
+				background-position: left;
+				background-repeat: no-repeat;
+
+				@include media-mx(991) {
+					display: none;
+				}
+			}
+		}
+	}
+	.section-subtitle {
+		max-width: 890px;
+
+		font-size: 36px;
+		text-align: center;
+		font-weight: 700;
+
+		margin-bottom: 80px;
+
+		@include media-mn(1900) {
+			font-size: 40px;
+		}
+		@include media-mx(991) {
+			font-weight: 500;
+			font-size: 20px;
+
+			margin-bottom: 32px;
+		}
+		@include media-mx(575) {
+		  text-align: left;
+		}
+		span {
+			color: var(--primary-06);
+		}
+	}
+	.img-box {
+		border-radius: 32px;
+		@include media-mx(991) {
+			border-radius: 16px;
+
+			margin-bottom: 24px;
+		}
+		img {
+			border-radius: 32px;
+			@include media-mx(991) {
+				border-radius: 16px;
+			}
+		}
+	}
+	.row {
+		padding: 0 32px;
+		margin-top: -94px;
+
+		@include media-mx(991) {
+			margin-top: 0;
+			padding: 0;
+		}
+		.item {
+			height: 100%;
+
+			padding: 32px;
+			border-radius: 32px;
+
+			box-shadow:
+				0 0 1px 0 rgba(19, 23, 35, 0.04),
+				0 0 2px 0 rgba(19, 23, 35, 0.06),
+				0 3px 6px 0 rgba(19, 23, 35, 0.04);
+			background-color: var(--white);
+
+			@include media-mx(991) {
+				padding: 16px;
+				border-radius: 16px;
+			}
+			h4 {
+				font-size: 28px;
+				font-weight: 700;
+
+				margin-bottom: 24px;
+
+				@include media-mn(1900) {
+					font-size: 32px;
+				}
+				@include media-mx(991) {
+					font-size: 18px;
+
+					margin-bottom: 8px;
+				}
+			}
+			p {
+				font-size: 20px;
+				@include media-mn(1990) {
+					font-size: 24px;
+				}
+				@include media-mx(991) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

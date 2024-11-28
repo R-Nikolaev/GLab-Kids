@@ -1,0 +1,45 @@
+// Заголовки, общие БЄМ блоки и прочее...
+[class*="__container"] {
+	padding: 0 126px;
+
+	@include media-mx(991) {
+		padding: 0 16px;
+	}
+
+	&.grey {
+		padding: 80px 126px;
+
+		border-radius: 32px;
+
+		background-color: var(--grayscale-07);
+
+		@include media-mx(991) {
+			border-radius: 16px;
+
+			padding: 24px 16px;
+		}
+	}
+}
+
+h2.section-title {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 120%;
+	text-align: center;
+
+	color: var(--grayscale-01);
+	@include media-mn(1900) {
+		font-size: 52px;
+	}
+	@include media-mx(991) {
+		font-size: 24px;
+	}
+}
+
+section {
+	margin-top: 180px;
+	@include media-mx(991) {
+		margin-top: 100px;
+	}
+}
